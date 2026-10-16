@@ -46,6 +46,9 @@ Os custos dependem da região AWS, do tempo de utilização e das configuraçõe
 O primeiro passo foi a criação da VPC. Nela, coloquei o CIDR IPv4 como 10.0.0.0/16, um bloco muito utilizado em testes, com mais de 65 mil (65.536) IPs disponíveis para os recursos.
 Em seguida, criei as subnets, que são como "caixinhas" dentro da rede e podem ser privadas ou públicas. Como padrão, criamos a mesma quantidade de subnets públicas e privadas; no meu caso, duas públicas e duas privadas. Todas usam o range /24, que disponibiliza 251 IPs utilizáveis por subnet (a AWS reserva 5 endereços em cada uma). A EC2 foi posicionada em uma subnet pública e o RDS nas subnets privadas.
 
+<img width="1444" height="385" alt="Captura de tela 2026-10-15 142524" src="https://github.com/user-attachments/assets/12b0b9c0-5c1f-4fa0-9398-cfeb5b10b028" />
+
+
 ### 2.	Criação do Internet Gateway
 Para a subnet pública ter acesso à internet, é necessário criar um Internet Gateway e anexá-lo à VPC. Em seguida, criei a Tabela de rotas com a rota 0.0.0.0/0 apontando para o Internet Gateway e a associei às subnets públicas. As subnets privadas não possuem essa rota, e não foi utilizado NAT Gateway, para evitar custos, já que o RDS não precisa de acesso à internet.
 
