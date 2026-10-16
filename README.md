@@ -47,14 +47,15 @@ Para a subnet pública ter acesso à internet, é necessário criar um Internet 
 
 ### 3.	EC2
 Para criar a EC2, utilizei a imagem Amazon Linux 2023, elegível ao nível gratuito, e a instância t3.micro, posicionada em uma subnet pública. Criei um par de chaves apenas para a instância. O Security Group possui uma única regra de entrada: HTTP, TCP 80, com origem no meu IP (formato x.x.x.x/32), por segurança. Não há regra de entrada para SSH (porta 22), pois o acesso é feito pelo SSM. A saída ficou como padrão (todo o tráfego liberado), o que permite instalar pacotes e conectar ao RDS. O disco EBS foi configurado com 15 GB, tipo gp3.
+
 Obs: Para podermos nos conectar à instância pelo console, via SSM, recomendo criar uma função no IAM com a política AmazonSSMManagedInstanceCore.
 
-**O passo a passo é:**
-- IAM  Funções
-- Tipo de entidade confiável  Serviço da AWS
-- Caso de uso  EC2
-- Caso de uso especificado  EC2 Role for AWS Systems Manager
-- Próximo  Nomear
+**O passo a passo no console é:**
+- IAM --> Funções
+- Tipo de entidade confiável --> Serviço da AWS
+- Caso de uso --> EC2
+- Caso de uso especificado --> EC2 Role for AWS Systems Manager
+- Próximo --> Nomear
 - Criar perfil
 
 
