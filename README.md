@@ -69,6 +69,9 @@ Obs: Para podermos nos conectar à instância pelo console, via SSM, recomendo c
 Voltando na criação da instância, em Detalhes avançados → Perfil de instância do IAM, selecione a função criada. Depois, clique em Executar instância.
 Com a instância em execução, aloque um Elastic IP (EC2 → Elastic IPs → Alocar endereço IP elástico) e associe-o à instância. Assim, o endereço de acesso ao WordPress não muda ao parar e iniciar a EC2, e terá acesso ao IPV4 Público da máquina.
 
+<img width="1270" height="40" alt="Captura de tela 2026-10-16 114823" src="https://github.com/user-attachments/assets/b03dbcc9-3ba4-4ad8-bc38-cdec53922d2e" />
+
+
 ### 4.	Criar o RDS
 O Amazon RDS (Relational Database Service) é um serviço da AWS que facilita a criação e o gerenciamento de bancos de dados. Em vez de instalar e administrar o banco manualmente na EC2, podemos utilizar o RDS para manter os dados em um serviço separado.
 Neste projeto, utilizei o MySQL como mecanismo do banco de dados. O WordPress se conecta a ele para armazenar informações como páginas, publicações, usuários e configurações do site.
@@ -138,6 +141,9 @@ Atenção: desabilitar os backups automatizados reduz as possibilidades de recup
 
 #### 9. Criar o banco de dados
 Após revisar todas as configurações, clique em Criar banco de dados.
+
+<img width="1665" height="238" alt="Captura de tela 2026-10-16 114749" src="https://github.com/user-attachments/assets/c63eae54-2600-442b-8ff0-0c7d6878f4d0" />
+
 
 ### 5.	Instalação do Apache, PHP e WordPress e integração com o Amazon RDS
 
