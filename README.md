@@ -18,6 +18,7 @@ Este projeto tem como objetivo hospedar uma aplicação WordPress na AWS, utiliz
 ## Arquitetura
 A arquitetura foi desenvolvida na AWS com o objetivo de hospedar uma aplicação WordPress, utilizando uma instância Amazon EC2 para executar a aplicação e o Amazon RDS com MySQL para armazenar os dados.
 A infraestrutura utiliza uma Amazon VPC para organizar os recursos de rede, com sub-redes públicas e privadas para separar os componentes. Os Security Groups controlam o tráfego de entrada e saída, contribuindo para a segurança do ambiente. A infraestrutura possui quatro subnets, distribuídas em duas zonas de disponibilidade da região us-east-1 (N. Virginia): duas públicas e duas privadas. Uma subnet pública e uma privada estão na zona us-east-1a, enquanto as outras duas estão na zona us-east-1b.
+
 Na instância EC2, foram configurados o Apache, o PHP e o WordPress em um ambiente Linux, além da integração com o banco de dados MySQL hospedado no Amazon RDS. A EC2 está em uma subnet pública e utiliza um Elastic IP. Seu Security Group permite conexões HTTP pela porta 80 somente a partir do meu IP público (/32). Não há regra de entrada para SSH (porta 22), pois o acesso administrativo é realizado pelo AWS Systems Manager (SSM).
 O RDS está configurado sem acesso público e utiliza um grupo de sub-redes composto por duas subnets privadas. O acesso ao banco de dados pela porta MySQL 3306 é permitido somente a partir do Security Group da EC2. Não foi utilizado NAT Gateway, com o objetivo de reduzir custos, já que o RDS não precisa de acesso direto à internet para receber conexões da aplicação hospedada na EC2.
 O projeto foi desenvolvido de forma prática, permitindo explorar conceitos de computação em nuvem, redes, administração Linux, hospedagem de aplicações web, conectividade com banco de dados e segurança na AWS.
@@ -65,7 +66,6 @@ Com a instância em execução, aloque um Elastic IP (EC2 → Elastic IPs → Al
 ### 4.	Criar o RDS
 O Amazon RDS (Relational Database Service) é um serviço da AWS que facilita a criação e o gerenciamento de bancos de dados. Em vez de instalar e administrar o banco manualmente na EC2, podemos utilizar o RDS para manter os dados em um serviço separado.
 Neste projeto, utilizei o MySQL como mecanismo do banco de dados. O WordPress se conecta a ele para armazenar informações como páginas, publicações, usuários e configurações do site.
-
 
 
 
