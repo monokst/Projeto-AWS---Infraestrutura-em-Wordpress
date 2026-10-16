@@ -24,6 +24,8 @@ O RDS está configurado sem acesso público e utiliza um grupo de sub-redes comp
 
 O projeto foi desenvolvido de forma prática, permitindo explorar conceitos de computação em nuvem, redes, administração Linux, hospedagem de aplicações web, conectividade com banco de dados e segurança na AWS.
 
+<img width="1172" height="652" alt="Diagrama sem nome drawio (2)" src="https://github.com/user-attachments/assets/80a246d1-4ee6-49c0-bc8a-a2a455d6393d" />
+
 
 ## Custos estimados
 Os custos dependem da região AWS, do tempo de utilização e das configurações de cada recurso.
