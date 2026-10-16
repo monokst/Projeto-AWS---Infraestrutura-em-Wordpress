@@ -272,7 +272,7 @@ SHOW DATABASES;
 ```
 
 ```bash
-CREATE DATABASE wordpress;
+CREATE DATABASE NOME-DO-BANCO;
 ```
 
 ```bash
