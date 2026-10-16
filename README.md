@@ -272,7 +272,7 @@ Se aparecer status code 302, o WordPress está respondendo e redirecionando para
 
 #### Passo 10 — Acessar a interface do WordPress
 
-Para verificar se o a tela do Wordpress está funcionando
+Para verificar se o a tela do Wordpress está funcionando no navegador
 http://ELASTIC-IP-DA-EC2/wp-admin/install.php
 
 
