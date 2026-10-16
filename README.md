@@ -157,6 +157,9 @@ sudo systemctl status httpd
 - start: inicia o serviço.
 - enable: configura a inicialização automática junto com a EC2.
 - status: verifica se o serviço está funcionando.
+  
+
+  <img width="878" height="371" alt="image" src="https://github.com/user-attachments/assets/5f8bd95a-549c-4da5-89a2-92c82c1a20b6" />
 
 
 #### Passo 3 — Instalar o PHP e as extensões necessárias
@@ -209,6 +212,8 @@ define( 'DB_PASSWORD', 'SUA_SENHA_SEGURA' );
 define( 'DB_HOST', 'SEU-ENDPOINT-RDS' );
 ```
 
+<img width="641" height="560" alt="image" src="https://github.com/user-attachments/assets/1aaa713d-9fcf-45d8-a805-06aa7d9835a3" />
+
 
 Substitua os valores pelos dados reais:
 - DB_NAME: nome do banco de dados criado no RDS.
@@ -220,6 +225,9 @@ Gere também as chaves de segurança do WordPress em:
 Gerar chaves de segurança do WordPress
 
 Substitua o bloco AUTH_KEY até NONCE_SALT pelas chaves geradas. Salve o arquivo no Nano com Ctrl + O, Enter e saia com Ctrl + X.
+
+
+<img width="886" height="423" alt="image" src="https://github.com/user-attachments/assets/545ab825-1746-4d0a-8f38-8d432f25d11b" />
 
 
 Importante: o banco de dados e o usuário precisam existir no RDS antes de finalizar a instalação. O usuário deve ter as permissões necessárias sobre o banco do WordPress.
@@ -274,10 +282,18 @@ curl -I http://localhost
 Se aparecer status code 302, o WordPress está respondendo e redirecionando para a tela de instalação.
 
 
+<img width="739" height="248" alt="image" src="https://github.com/user-attachments/assets/bf6c5e65-89f8-428f-8147-8dd7b9d5eaa5" />
+
+
+
 #### Passo 10 — Acessar a interface do WordPress
 
 Para verificar se o a tela do Wordpress está funcionando no navegador
 http://ELASTIC-IP-DA-EC2/wp-admin/install.php
+
+
+<img width="845" height="459" alt="image" src="https://github.com/user-attachments/assets/6e1c2d23-02ba-475c-aa5e-4c98a130b39c" />
+
 
 
 ## Observações e limitações
