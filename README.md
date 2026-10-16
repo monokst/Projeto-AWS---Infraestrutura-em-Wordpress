@@ -21,6 +21,7 @@ A infraestrutura utiliza uma Amazon VPC para organizar os recursos de rede, com 
 
 Na instância EC2, foram configurados o Apache, o PHP e o WordPress em um ambiente Linux, além da integração com o banco de dados MySQL hospedado no Amazon RDS. A EC2 está em uma subnet pública e utiliza um Elastic IP. Seu Security Group permite conexões HTTP pela porta 80 somente a partir do meu IP público (/32). Não há regra de entrada para SSH (porta 22), pois o acesso administrativo é realizado pelo AWS Systems Manager (SSM).
 O RDS está configurado sem acesso público e utiliza um grupo de sub-redes composto por duas subnets privadas. O acesso ao banco de dados pela porta MySQL 3306 é permitido somente a partir do Security Group da EC2. Não foi utilizado NAT Gateway, com o objetivo de reduzir custos, já que o RDS não precisa de acesso direto à internet para receber conexões da aplicação hospedada na EC2.
+
 O projeto foi desenvolvido de forma prática, permitindo explorar conceitos de computação em nuvem, redes, administração Linux, hospedagem de aplicações web, conectividade com banco de dados e segurança na AWS.
 
 
